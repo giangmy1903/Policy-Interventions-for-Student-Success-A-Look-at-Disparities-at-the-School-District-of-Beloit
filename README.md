@@ -10,9 +10,9 @@ The School District of Beloit is racially and socio‑economically diverse. Achi
 
 The study aims to answer:
 
-1. Do academic performance and MAP test scores differ between racial or ethnic groups? Differences by majority/minority group were evaluated to see whether race correlates with Math or Reading outcomes.
-2. Are health disparities significant determinants of test scores? The dataset included self‑reported child health, which was recoded to compare “very good” health with other levels.
-3. How does English proficiency affect Math and Reading scores? English proficiency categories (e.g., Not Tested, Emerging, Developing, Expanding, Proficient) were consolidated and one‑hot encoded to test whether proficiency predicts achievement.
+1. Do academic performance and MAP test scores differ between racial or ethnic groups? 
+2. Are health disparities significant determinants of test scores? 
+3. How does English proficiency affect Math and Reading scores? 
 
 ## Key findings
 * Belonging to a minority group (i.e., non‑white) has a negative and statistically significant effect on Math and Reading scores, even after controlling for parental involvement and other factors.
@@ -22,15 +22,15 @@ The study aims to answer:
 * Robinson students. Todd Elementary also showed lower Reading scores (−50 points).
 * Caucasian (majority group) students scored higher on average, about 23 points higher in Math and 27.6 points higher in Reading.
 
-These results suggest that race and English proficiency, rather than self‑reported health, are key drivers of test score disparities in the district..
+These results suggest that race and English proficiency, rather than self‑reported health, are key drivers of test score disparities in the district.
 
 ## Data description
 
 The dataset contains 215 student records with 30 explanatory variables, grouped into three domains:
 
-Student demographics: variables such as race, grade, and majority/minority group indicator. A new variable Majority_Group was created to collapse duplicate race categories (e.g., Hispanic, Multi Race, and Fed Race were removed due to duplication).
-Parental involvement and socio‑economic factors: variables derived from survey questions about parents’ volunteer frequency, bedtime routines, library visits and number of books at home.
-Academic information: Math and Reading RIT scores, English proficiency levels, school names and other educational indicators.
+* **Student demographics:** variables such as race, grade, and majority/minority group indicator. A new variable `Majority_Group` was created to collapse duplicate race categories (e.g., Hispanic, Multi Race, and Fed Race were removed due to duplication).
+* **Parental involvement and socio‑economic factors:** variables derived from survey questions about parents’ volunteer frequency, bedtime routines, library visits and number of books at home.
+* **Academic information:** Math and Reading RIT scores, English proficiency levels, school names, and other educational indicators.
 
 Outcome variables: The primary outcomes analysed are the students’ Math and Reading RIT scores from the Winter 2018–2019 MAP test.
 
