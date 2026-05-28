@@ -44,8 +44,6 @@ To prepare the data for analysis, we performed several preprocessing steps:
 4. **Handling missing values:** Observations lacking numeric data were dropped, and missing categorical values were replaced with a `NULL` category.
 5. **Encoding:** All categorical variables were one‑hot encoded. Continuous variables were standardised for PCA and regression modelling.
 
-The cleaned dataset is saved in the data/ folder (if provided) for reproducibility.
-
 ## Exploratory analysis & methodology
 
 The cleaned data were explored through descriptive statistics and visualisation. **Principal component analysis (PCA)** was used to address multicollinearity and reduce dimensionality: the first ~40 principal components explained about 80 % of the variance. **Lasso regression** was then applied to select the most influential predictors for Math and Reading scores. Separate linear models were estimated for Math and Reading scores, and heteroskedasticity tests (White’s and Breusch-Pagan) were conducted. Robust standard errors were used for the Math model because the White test indicated heteroskedasticity (p ≈ 0.0024, not reported in the case study but noted in the accompanying DSDA technical report).
@@ -63,8 +61,8 @@ The final Math regression model (robust SE) had an R² of 0.248 and the followin
 
 | Predictor | Interpretation |
 | -------- | -------- |
-| Old_School_ROBINSON   | Students attending Robinson Elementary scored ~60 points lower on Math RIT compared with other schools   |
-| Majority_Group (majority)   | The majority-group students scored about 23 points higher than minority students  |
+| `Old_School_ROBINSON`   | Students attending Robinson Elementary scored ~60 points lower on Math RIT compared with other schools   |
+| `Majority_Group` (majority)   | The majority-group students scored about 23 points higher than minority students  |
 | English proficiency (Proficient)   | Higher English proficiency was associated with higher Math scores (coefficient ~12 points; not as strong as for Reading)   |
 | Child health (Very good)   | Not statistically significant, suggesting health disparities were not linked to Math performance   |
 
@@ -74,21 +72,20 @@ For Reading scores, the Lasso procedure selected similar and additional variable
 
 | Predictor | Interpretation |
 | -------- | -------- |
-| Old_School_ROBINSON   | Students at Robinson Elementary scored ~71 points lower in Reading than those at other schools  |
-| Old_School_TODD   | Students at Todd Elementary scored ~50 points lower in Reading   |
-| Majority_Group (majority)   | 	Caucasian/Asian students scored about 27.6 points higher in Reading   |
+| `Old_School_ROBINSON`   | Students at Robinson Elementary scored ~71 points lower in Reading than those at other schools  |
+| `Old_School_TODD`   | Students at Todd Elementary scored ~50 points lower in Reading   |
+| `Majority_Group` (majority)   | 	Caucasian/Asian students scored about 27.6 points higher in Reading   |
 | English proficiency (Proficient)  | Proficient students scored about 60 points higher in Reading  |
 | Parental involvement variables | Some measures (e.g., number of books at home, library visits) had minor positive effects but were not always statistically significant   |
 	
 ## Policy recommendations
 
-Based on the findings, the study proposes targeted interventions:
-
-Tutoring and mentoring programmes for minority students: Provide dedicated tutoring, mentoring, and after‑school programmes to support minority students who may face systemic disadvantages.
-Culturally responsive pedagogy: Employ teaching methods that reflect students’ cultures and languages, and invest in bilingual or ESL programmes to improve English proficiency.
-Revitalise Robinson Elementary School: Allocate resources to improve teaching quality, learning environments, and school leadership at underperforming schools like Robinson Elementary.
+* Tutoring and mentoring programmes for minority students: Provide dedicated tutoring, mentoring, and after‑school programmes to support minority students who may face systemic disadvantages.
+* Culturally responsive pedagogy: Employ teaching methods that reflect students’ cultures and languages, and invest in bilingual or ESL programmes to improve English proficiency.
+* Revitalise Robinson Elementary School: Allocate resources to improve teaching quality, learning environments, and school leadership at underperforming schools like Robinson Elementary.
+  
 ## Limitations & future work
-Sample size & generalisability: The dataset comprises only 215 observations from one testing period, limiting the ability to generalise findings to other years or districts. Future studies could incorporate longitudinal data to assess trends over time.
-Measurement error: Self‑reported variables (e.g., child health, parental involvement) may be biased; exploring alternative measures (such as school attendance records or health assessments) could improve model accuracy.
-Unobserved confounders: Factors such as school funding, teacher quality, or socio‑economic status were not fully captured; including additional variables or applying causal inference techniques could help isolate effects.
-Model complexity: Lasso regression selected a limited set of predictors, but exploring non‑linear models or hierarchical (multilevel) structures might better capture relationships between schools and student outcomes.
+* Sample size & generalisability: The dataset comprises only 215 observations from one testing period, limiting the ability to generalise findings to other years or districts. Future studies could incorporate longitudinal data to assess trends over time.
+* Measurement error: Self‑reported variables (e.g., child health, parental involvement) may be biased; exploring alternative measures (such as school attendance records or health assessments) could improve model accuracy.
+* Unobserved confounders: Factors such as school funding, teacher quality, or socio‑economic status were not fully captured; including additional variables or applying causal inference techniques could help isolate effects.
+* Model complexity: Lasso regression selected a limited set of predictors, but exploring non‑linear models or hierarchical (multilevel) structures might better capture relationships between schools and student outcomes.
