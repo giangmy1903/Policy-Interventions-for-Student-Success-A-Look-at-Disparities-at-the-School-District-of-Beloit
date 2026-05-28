@@ -63,22 +63,24 @@ The final Math regression model (robust SE) had an R² of 0.248 and the followin
 
 | Predictor | Interpretation |
 | -------- | -------- |
-| Old_School_ROBINSON   | Students attending Robinson Elementary scored ~60 points lower on Math RIT compared with other schools.   |
-| Majority_Group (majority)   | The majority-group students scored about 23 points higher than minority students.   |
-| English proficiency (Proficient)   | Higher English proficiency was associated with higher Math scores (coefficient ~12 points; not as strong as for Reading).   |
-| Child health (Very good)   | Not statistically significant, suggesting health disparities were not linked to Math performance.   |
+| Old_School_ROBINSON   | Students attending Robinson Elementary scored ~60 points lower on Math RIT compared with other schools   |
+| Majority_Group (majority)   | The majority-group students scored about 23 points higher than minority students  |
+| English proficiency (Proficient)   | Higher English proficiency was associated with higher Math scores (coefficient ~12 points; not as strong as for Reading)   |
+| Child health (Very good)   | Not statistically significant, suggesting health disparities were not linked to Math performance   |
 
 ### Reading performance model
 
 For Reading scores, the Lasso procedure selected similar and additional variables. Tests for heteroskedasticity indicated no significant issue, so ordinary least squares standard errors were retained. The model explained about 53 % of the variation in Reading scores (R² ≈ 0.532). Significant results include:
 
-Predictor	Interpretation
-Old_School_ROBINSON	Students at Robinson Elementary scored ~71 points lower in Reading than those at other schools.
-Old_School_TODD	Students at Todd Elementary scored ~50 points lower in Reading.
-Majority_Group (majority)	Caucasian/Asian students scored about 27.6 points higher in Reading.
-English proficiency (Proficient)	Proficient students scored about 60 points higher in Reading.
-Parental involvement variables	Some measures (e.g., number of books at home, library visits) had minor positive effects but were not always statistically significant.
-Policy recommendations
+| Predictor | Interpretation |
+| -------- | -------- |
+| Old_School_ROBINSON   | Students at Robinson Elementary scored ~71 points lower in Reading than those at other schools  |
+| Old_School_TODD   | Students at Todd Elementary scored ~50 points lower in Reading   |
+| Majority_Group (majority)   | 	Caucasian/Asian students scored about 27.6 points higher in Reading   |
+| English proficiency (Proficient)  | Proficient students scored about 60 points higher in Reading  |
+| Parental involvement variables | Some measures (e.g., number of books at home, library visits) had minor positive effects but were not always statistically significant   |
+	
+## Policy recommendations
 
 Based on the findings, the study proposes targeted interventions:
 
